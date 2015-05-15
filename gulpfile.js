@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var lessAutoPrefix = require('less-plugin-autoprefix');
 var lessCleanCss = require('less-plugin-clean-css');
+var browserSync = require('browser-sync').create();
 
 var isMin = false;
 
@@ -32,7 +33,8 @@ gulp.task('js',function() {
     tmp.pipe(uglify());
   tmp
     .pipe(header(creditText))
-    .pipe(gulp.dest('./src/public/'));
+    .pipe(gulp.dest('./src/public/'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('css',function() {
@@ -45,7 +47,8 @@ gulp.task('css',function() {
       .pipe(header(creditText));
   else
     tmp.pipe(header(creditText));
-  tmp.pipe(gulp.dest('./src/public/'));
+  tmp.pipe(gulp.dest('./src/public/'))
+  .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('build',function() {
@@ -56,6 +59,14 @@ gulp.task('build',function() {
 gulp.task('default',['js','css']);
 
 gulp.task('watch',function() {
+
+  browserSync.init({
+    server : {
+      baseDir : "./"
+    }
+  })
+
+  gulp.watch("*.html").on('change',browserSync.reload);
   gulp.watch(['./src/private/*.coffee'],['js']);
   gulp.watch(['./src/private/*.less'],['css']);
 });
