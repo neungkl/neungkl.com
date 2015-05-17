@@ -1,3 +1,6 @@
+@robotoFont : 'Roboto', 'Quark', Arial, Tahoma, 'Sans-serif';
+@defaultFont : Arial, Tahoma, 'Sans-serif';
+
 @font-face {
   font-family : 'Quark';
   src : url('../font/Quark/Quark-Light.otf');
@@ -10,15 +13,67 @@
 }
 
 body {
-  font-family: 'Quark', Arial, Tahoma, 'Sans-serif';
+  font-family: @defaultFont;
   background: #212121;
   color: #FFF;
 }
 
+.header-wrapper {
+  background-color: #09a1d3;
+  padding: 50px;
+}
+
+section {
+  * {
+    color: #FFF;
+  }
+  &.website {
+    background-color: #551506;
+  }
+  &.project {
+    background-color: #f5950c;
+    * {
+      color: #431503;
+    }
+  }
+
+  h3 {
+    .fa {
+      font-size: 1.5rem;
+    }
+  }
+  .grid-pic {
+    margin-top: 25px;
+    text-align: center;
+    .image {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      margin-bottom : 20px;
+    }
+  }
+  .container {
+    padding: 20px;
+  }
+}
+
 header {
-  .head-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 40px 0px 20px;
+  * {
+    color: #FFF;
+  }
+  h2 {
+    font-family: @robotoFont;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .sharing {
+      margin: 17px 0px;
+      a {
+        color: #FFF;
+        font-size: 2.5rem;
+        margin: 0px 2px;
+        padding: 5px;
+      }
   }
 }
