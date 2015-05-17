@@ -31,25 +31,39 @@ section {
     background-color: #551506;
   }
   &.project {
-    background-color: #f5950c;
+    background-color: #fca611;
     * {
       color: #431503;
+    }
+    .image-container {
+      min-height: 330px;
     }
   }
 
   h3 {
+    font-family: @robotoFont;
+    font-weight: bold;
     .fa {
       font-size: 1.5rem;
     }
   }
   .grid-pic {
-    margin-top: 25px;
+    div {
+      margin-top: 10px;
+      margin-bottom : 5px;
+    }
     text-align: center;
     .image {
       width: 100%;
       height: 200px;
       background-size: cover;
-      margin-bottom : 20px;
+      background-position: center;
+      margin-bottom: 7px;
+      box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+    strong {
+      font-family: @robotoFont;
+      font-size: 1.25rem;
     }
   }
   .container {
@@ -76,4 +90,10 @@ header {
         padding: 5px;
       }
   }
+}
+
+footer {
+  font-size: 0.75rem;
+  padding: 7px;
+  color: #999;
 }

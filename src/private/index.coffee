@@ -1,1 +1,2 @@
-console.log 555
+window.onload = ->
+  document.getElementById('credit-year').innerHTML = ( new Date().getYear() + 1900 )
