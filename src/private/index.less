@@ -16,8 +16,14 @@ section {
   * {
     color: #FFF;
   }
+  padding: 30px 0;
   &.website {
     background-color: #551506;
+    .grid-pic .row > div.large-4 {
+      @media ( min-width: 40.0625em ) {
+        height: 310px;
+      }
+    }
   }
   &.project {
     background-color: #fca611;

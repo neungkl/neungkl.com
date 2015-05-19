@@ -66,7 +66,7 @@ gulp.task('watch',function() {
     }
   })
 
-  gulp.watch("*").on('change',browserSync.reload);
+  gulp.watch(["*","portfolio/*"]).on('change',browserSync.reload);
   gulp.watch(['./src/private/*.coffee'],['js']);
   gulp.watch(['./src/private/*.less'],['css']);
 });
