@@ -1,24 +1,26 @@
 @robotoFont : 'Roboto', Arial, Tahoma, 'Sans-serif';
 @defaultFont : Arial, Tahoma, 'Sans-serif';
 
+@blueColor: #10a3d4;
+@brownColor: #4f1806;
+
 body {
   font-family: @defaultFont;
-  background: #3a0e02;
   color: #FFF;
 }
 
 .header-wrapper {
-  background-color: #09a1d3;
+  background-color: @blueColor;
   padding: 50px 30px;
 }
 
 section {
-  * {
-    color: #FFF;
-  }
   padding: 30px 0;
   &.website {
-    background-color: #551506;
+    * {
+      color: #fff;
+    }
+    background: @brownColor;
     .grid-pic .row > div.large-4 {
       @media ( min-width: 40.0625em ) {
         height: 310px;
@@ -26,9 +28,9 @@ section {
     }
   }
   &.project {
-    background-color: #fca611;
+    background-color: #eee;
     * {
-      color: #431503;
+      color: #333;
     }
     @media ( min-width:40.0625em ) {
       .image-container {
@@ -61,7 +63,7 @@ section {
       background-size: cover;
       background-position: center;
       margin-bottom: 7px;
-      box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
     }
     strong {
       font-family: @robotoFont;
@@ -95,7 +97,8 @@ header {
 }
 
 footer {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   padding: 7px;
-  color: rgba(255,255,255,0.7);
+  color: #fff;
+  background: @brownColor;
 }
