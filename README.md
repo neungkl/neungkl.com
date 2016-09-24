@@ -1,6 +1,6 @@
 # NeungKL Website
 
-My personal website at [http://kosatestudio.com](http://kosatestudio.com)
+My personal website at [http://neungkl.com](http://neungkl.com)
 
 This repository includes
 * Main static page of website
