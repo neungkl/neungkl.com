@@ -4,14 +4,27 @@
 @blueColor: #10a3d4;
 @brownColor: #4f1806;
 
+* {
+  font-family: @robotoFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
 body {
-  font-family: @defaultFont;
+  font-family: @robotoFont;
+  font-weight: 300;
   color: #FFF;
 }
 
 .header-wrapper {
   background-color: @blueColor;
   padding: 50px 30px;
+}
+
+.row {
+  padding: 0px 6px;
 }
 
 section {
@@ -108,7 +121,7 @@ section {
 
   h3 {
     font-family: @robotoFont;
-    font-weight: bold;
+    font-weight: 300;
     .fa {
       font-size: 1.5rem;
     }
@@ -127,6 +140,7 @@ section {
     strong {
       font-family: @robotoFont;
       font-size: 1.25rem;
+      font-weight: 400;
     }
   }
   .container {

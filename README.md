@@ -8,3 +8,12 @@ This repository includes
 
 If you need to look at the new portfolio.<br>
 Follow the link here [Portfolio colorful repo](https://github.com/neungkl/portfolio-colorful)
+
+## Usage
+
+```
+npm install
+bower install
+gulp build
+gulp watch
+```
